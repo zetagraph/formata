@@ -17,13 +17,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  border-bottom: 1px solid $clouds;
-  @include typecsset-space(padding-bottom);
+  @include typecsset-font-size(42px);
 }
 
+h2 {
+  @include typecsset-font-size(30px);
+}
+
+h3 {
+  @include typecsset-font-size(24px);
+}
+
+h4 {
+  @include typecsset-font-size(20px);
+}
+
+h5 {
+  @include typecsset-font-size(18px);
+}
+
+h5 {
+  @include typecsset-font-size(16px);
+}
 
 p.large {
-  @include typecsset-font-size(22px);
   // @include typecsset-space(margin-bottom);
 }
 

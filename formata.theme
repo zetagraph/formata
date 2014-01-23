@@ -69,7 +69,8 @@ function formata_library_info() {
        drupal_get_path('theme', 'formata') . '/js/rainbow/rainbow.linenumbers.min.js' => array(),
        drupal_get_path('theme', 'formata') . '/js/rainbow/language/generic.js' => array(),
        drupal_get_path('theme', 'formata') . '/js/rainbow/language/javascript.js' => array(),
-       drupal_get_path('theme', 'formata') . '/js/rainbow/language/php' => array(),
+       drupal_get_path('theme', 'formata') . '/js/rainbow/language/css.js' => array(),
+       drupal_get_path('theme', 'formata') . '/js/rainbow/language/php.js' => array(),
        drupal_get_path('theme', 'formata') . '/js/script.js' => array(),
       ),
       'dependencies' => array(

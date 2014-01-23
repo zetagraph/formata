@@ -831,48 +831,76 @@ h1, h2, h3, h4, h5, h6 {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000319}}
 h1 {
-  border-bottom: 1px solid #ecf0f1;
-  padding-bottom: 48px;
-  padding-bottom: 3rem;
+  font-size: 42px;
+  font-size: 2.625rem;
+  line-height: 1.14286;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000325}}
-p.large {
-  font-size: 22px;
-  font-size: 1.375rem;
-  line-height: 1.09091;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000323}}
+h2 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.6;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000327}}
+h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000331}}
+h4 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000335}}
+h5 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000339}}
+h5 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000347}}
 .content ul {
   list-style-position: inside;
   list-style-type: disc;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000351}}
 .content ol {
   list-style-position: inside;
   list-style-type: decimal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000355}}
 strong, b {
   font-weight: 700;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000359}}
 em, i, q {
   font-style: italic;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000363}}
 blockquote {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.2;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000367}}
 hr {
   background: none;
   height: 1px;
@@ -882,7 +910,7 @@ hr {
 }
 
 @media screen and (max-width: 400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andrei\/Sites\/drupal8\/themes\/formata\/sass\/partials\/typography\/_typography\.scss}line{font-family:\0000375}}
   .content {
     font-size: 14px;
     font-size: 0.875rem;
