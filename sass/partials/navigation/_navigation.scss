@@ -1,0 +1,83 @@
+/**
+ * @file
+ * Navigation.
+ */
+
+#main-nav {
+  ul {
+    border-top: 1px solid darken($peter-river, 7%);
+    li {
+      @include nobullet;
+      a {
+        display: block;
+        padding: .5em 1em;
+        color: $white;
+        font-family: $title-font;
+        font-weight: $bold;
+        @include adjust-font-size-to(18px);
+        letter-spacing: 1px;
+        border-bottom: 1px solid darken($peter-river, 7%);
+        &:hover {
+        background:  darken($peter-river, 2%);
+        color: darken($white, 10%);
+        }
+        @include breakpoint($break-medium) {
+          padding: .5em 10%;
+        }
+      }
+    }
+  }
+}
+
+.naver .naver-handle {
+  cursor: pointer;
+  display: none;
+  user-select: none;
+  }
+
+.naver .naver-handle:before {
+  display: block;
+  content: "\f039";
+  font-family: FontAwesome;
+  color: $white;
+  @include adjust-font-size-to(22px);
+}
+.naver .naver-wrapper {
+  height: auto;
+}
+.naver .naver-container:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  }
+  @include breakpoint($break-large)  {
+    .naver .naver-wrapper {
+      height: auto !important;
+    }
+  }
+
+@media screen and (max-width: 700px) {
+.naver.active .naver-handle {
+  display: block;
+  position: absolute;
+  top: 1.1em;
+  right: 1em;
+}
+.naver.active .naver-wrapper {
+  height: 0px;
+  overflow: hidden;
+}
+.naver.animated .naver-wrapper {
+  transition: height 0.2s ease-out;
+}
+.naver.animated .naver-container {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+.naver.animated.open .naver-container {
+  opacity: 1;
+}
+}

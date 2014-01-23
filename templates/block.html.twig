@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Almost Default theme implementation to display a block. Removed outer div.
+ *  @todo Remove the div around content as per http://drupal.org/node/1972122.
+#}
+
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  <div{{ content_attributes }}>
+    {{ content }}
+  </div>

@@ -1,0 +1,84 @@
+/**
+ * @file
+ * Layout elements.
+ */
+
+html,body  {
+  height: 100%;
+}
+
+//  Sidebar
+
+#sidebar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $peter-river;
+
+  @include breakpoint($break-medium) {
+    @include grid-span(2);
+    position: fixed;
+    height: 100%;
+  }
+
+  @include breakpoint($break-large) {
+    @include grid-span(2);
+    position: fixed;
+    height: 100%;
+  }
+}
+
+.region-sidebar {
+  display: inline;
+  width: 100%;
+}
+
+.region-sidebar  {
+  display: none;
+  .social {
+    display: inline-block;
+    margin: 0 2% 0 0;
+    color:  darken($peter-river, 15);
+    &:hover {
+      color: $white;
+    }
+  }
+  @include breakpoint($break-medium) {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 1em 10%;
+    @include typecsset-font-size(36px);
+  }
+}
+
+// Main Content
+
+#main-content {
+  padding: 2em 1em;
+  min-height: 100%;
+  position: relative;
+
+  @include breakpoint($break-medium) {
+    @include grid-span(5, 3);
+    padding: 3em 0 6em 0;
+  }
+  @include breakpoint($break-large) {
+    @include grid-span(7, 3);
+    padding: 3em 0 5em 0;
+ }
+}
+
+#content {
+  padding-bottom: 80px;
+}
+
+#footer {
+  margin: -80px 0 0 0;
+  padding: 1em 0;
+  border-top: solid 1px $clouds;
+  @include typecsset-font-size(12px);
+  color: $asbestos;
+}

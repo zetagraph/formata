@@ -1,0 +1,58 @@
+{#
+/**
+ * @file display a single page.
+ */
+#}
+<div id="sidebar">
+  <div class="branding">
+    <a class="logo" href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">formata</a>
+    {% if site_slogan %}
+    <div class="slogan">
+      {{ site_slogan }}
+    </div>
+    {% endif %}
+  </div>
+  {% if main_menu %}
+  <nav id="main-nav" class="naver" role="navigation" >
+    {{ main_menu }}
+  </nav>
+  {% endif %}
+  {% if page.sidebar %}
+  {{ page.sidebar }}
+  {% endif %}
+</div>
+<div id="main-content">
+      {% if messages %}
+        <div id="messages">
+         <div class="contain clearfix">
+          {{ messages }}
+        </div>
+      </div>
+      {% endif %}
+    <main id="content"  role="main">
+      {% if tabs %}
+      <nav class="tabs" role="navigation">
+        {{ tabs }}
+      </nav>
+      {% endif %}
+      {{ page.help }}
+      {% if action_links %}
+      <ul class="action-links">
+        {{ action_links }}
+      </ul>
+      {% endif %}
+      {{ title_prefix }}
+      {% if title %}
+      <h1 class="title" id="page-title">
+        {{ title }}
+      </h1>
+      {% endif %}
+      {{ title_suffix }}
+      {{ page.content }}
+    </main>
+    <footer  id="footer">
+          {% if page.footer %}
+          {{ page.footer }}
+          {% endif %}
+      </footer>
+  </div>

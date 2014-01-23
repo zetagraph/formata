@@ -1,0 +1,132 @@
+/**
+ * @file
+ * Mixins.
+ */
+
+@mixin bleed($padding: $grid-padding, $sides: left right) {
+  @if $sides == 'all' {
+    margin: - $padding;
+    padding: $padding;
+  } @else {
+    @each $side in $sides {
+      margin-#{$side}: - $padding;
+      padding-#{$side}: $padding;
+    }
+  }
+}
+
+@mixin box {
+    border: white 0em solid;
+    -webkit-border-radius: 0.15em 0.15em;
+    -moz-border-radius: 0.15em / 0.15em;
+    border-radius: 0.15em / 0.15em;
+    -webkit-box-shadow: rgba(0,0,0,0.15) 0 1px 4px;
+    -moz-box-shadow: rgba(0,0,0,0.15) 0 1px 4px;
+    box-shadow: rgba(0,0,0,0.15) 0 1px 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+@mixin navigation-list {
+    list-style-type:none;
+    padding:0;
+    margin:0;
+    overflow:hidden;
+    > li{
+        display:block;
+        float:left;
+        &:last-child{
+            margin-right:0px;
+        }
+    }
+}
+
+@mixin no-bullet {
+  list-style-image: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+@mixin hide-text{
+    overflow:hidden;
+    text-indent:-9000px;
+    display:block;
+}
+
+
+@mixin letterpress($opacity){
+    text-shadow:white($opacity) 0 1px 0;
+}
+
+@mixin box-emboss($opacity, $opacity2){
+    box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
+@mixin border {
+    border: white 0.5em solid;
+    -webkit-border-radius: 0.15em 0.15em;
+    -moz-border-radius: 0.15em / 0.15em;
+    border-radius: 0.15em / 0.15em;
+    -webkit-box-shadow: rgba(0,0,0,0.15) 0 1px 4px;
+    -moz-box-shadow: rgba(0,0,0,0.15) 0 1px 4px;
+    box-shadow: rgba(0,0,0,0.15) 0 1px 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin inset-shadow {
+    box-shadow:inset 0px 0px 85px rgba(0,0,0,.5);
+    -webkit-box-shadow:inset 0px 0px 85px rgba(0,0,0,.5);
+    -moz-box-shadow:inset 0px 0px 85px rgba(0,0,0,.5);
+}
+
+@mixin gradient {
+    background: #fff;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe',endColorstr='#f0f0f0');
+    background: -webkit-gradient(linear,left top,left bottom,from(#FEFEFE),to(#F0F0F0));
+    background: -moz-linear-gradient(top,#FEFEFE,#F0F0F0);
+}
+
+@mixin background-pattern {
+    background: #662591 url(../images/dark-pattern.png) repeat;
+}
+
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
+
+// List styles
+// -------------------------------------------------------
+
+// Mixins for list style types
+@mixin unordered {
+     list-style-position: inside;
+     list-style-type: disc;
+}
+
+@mixin unordered-inside {
+     list-style-position: inside;
+     list-style-type: disc;
+}
+
+@mixin ordered {
+    list-style-position: inside;
+    list-style-type: decimal;
+}
+
+@mixin ordered-inside {
+    list-style-position: inside;
+    list-style-type: decimal;
+}
+
+@mixin nobullet {
+    list-style-type: none;
+}

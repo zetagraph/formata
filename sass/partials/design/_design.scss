@@ -1,0 +1,191 @@
+/**
+ * @file
+ * Design elements.
+ */
+
+#sidebar {
+  .branding {
+    padding: 1em;
+    @include breakpoint($break-medium) {
+      padding: 3em 10%;
+    }
+  }
+
+  .logo {
+    color: $white;
+    @include typecsset-font-size(26px);
+    font-weight: $bold;
+    font-family: $title-font;
+    text-transform: uppercase;
+    &:hover {
+      color:  darken($belize-hole, 20%);
+    }
+  }
+
+  .slogan {
+    color:  darken($belize-hole, 10%);
+    @include typecsset-font-size(16px);
+    line-height: 1;
+    font-weight: $light;
+  }
+}
+
+.views-row {
+  padding: .5em 0;
+  border-bottom: solid 1px $clouds;
+  .views-field-title {
+    margin: 0;
+    @include typecsset-font-size(22px);
+  }
+}
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+  &:hover {
+    color: darken($linkColor, 5%);
+  }
+}
+
+.button {
+  text-align: center;
+  @include sassy-button("flat", 2px, 14px, $belize-hole);
+  color: $white;
+  font-family: $title-font;
+  &:hover {
+    color: $white;
+  }
+}
+
+// Page Scroll Up
+#scrollUp {
+  bottom: 20px;
+  right: 20px;
+  height: 38px;
+  width: 38px;
+  background: url(../img/top.png) no-repeat;
+}
+
+
+// Overrides
+.tabs {
+  margin: 0 0 2em 0;
+  @include typecsset-font-size(14px);
+}
+.messages {
+  margin-bottom: 1em;
+}
+
+.link-wrapper ul,
+ul.inline li {
+  margin: 0;
+  padding: 0;
+}
+
+
+// Code Highligting
+
+pre {
+  background: #272822;
+  word-wrap: break-word;
+  color: $white;
+  overflow: scroll;
+  @include typecsset-font-size(12px);
+  @include typecsset-space(margin-bottom);
+
+  table {
+  margin: 0;
+}
+  th,
+  td {
+      padding: 0;
+  }
+}
+
+pre, code {
+    font-family: 'Monaco', courier, monospace;
+}
+
+pre .comment {
+    color: #75715E;
+}
+
+pre .constant {
+    color: #AE81FF;
+}
+
+pre .storage {
+    color: #66D9EF;
+}
+
+pre .string, pre .comment.docstring {
+    color: #E6DB74;
+}
+
+pre .support.tag {
+    color: #fff;
+}
+
+pre .keyword {
+    color: #F92672;
+}
+
+pre .selector {
+    color: #F92672;
+}
+
+pre .inherited-class {
+    font-style: italic;
+}
+
+pre .operator, pre .support.tag-name , pre .entity.tag {
+    color: #F92672;
+}
+
+pre .entity, pre .support.attribute, pre .entity.attribute {
+    color: #A6E22E;
+}
+
+pre .support, *[data-language="c"] .function.call {
+    color: #66D9EF;
+}
+
+*[data-language="html"] .support.operator {
+    color: #fff;
+}
+
+pre .css-property, pre .storage.function {
+    font-style: italic;
+}
+
+pre .variable.global, pre .variable.class, pre .variable.instance {
+    color: #A6E22E;
+}
+
+// Line Numbers
+
+
+.rainbow {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.rainbow .line:hover {
+  background-color: #171b1c;
+}
+.rainbow .line:hover .line-number {
+  background-color: #101313;
+}
+.rainbow .line .line-number {
+  text-align: right;
+  background-color: #1b2022;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  color: $silver;
+
+}
+.rainbow .line .line-number:before {
+  content: attr(data-line-number);
+}
+.rainbow .line .line-code {
+  width: 100%;
+}

@@ -1,0 +1,60 @@
+/**
+ * @file
+ * Typography
+ */
+
+
+body {
+  font-family: $body-font;
+  font-weight: $light;
+  color: $midnight-blue;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $title-font;
+  font-weight: $bold;
+  color: $wet-asphalt;
+}
+
+h1 {
+  border-bottom: 1px solid $clouds;
+  @include typecsset-space(padding-bottom);
+}
+
+
+p.large {
+  @include typecsset-font-size(22px);
+  // @include typecsset-space(margin-bottom);
+}
+
+.content ul {
+@include unordered;
+}
+
+.content ol {
+  @include ordered;
+}
+
+strong, b   {
+  font-weight: $bold;
+}
+
+em, i, q  {
+  font-style: italic;
+}
+
+blockquote {
+ @include typecsset-font-size(20px);
+}
+
+hr {
+  background: none;
+  height: 1px;
+  border: 1px  solid $clouds;
+  @include typecsset-space(margin-bottom);
+}
+
+@media screen and (max-width: 400px) {
+  .content {
+    @include typecsset-font-size(14px);  }
+}

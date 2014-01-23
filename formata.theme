@@ -1,0 +1,82 @@
+<?php
+/**
+ * @file
+ * Contains theme override and preprocess functions.
+ */
+
+function formata_preprocess_html(&$variables) {
+
+    // Set up meta tags.
+    // Modern IE & chrome-frame rendering engine tag.
+    $rendering_meta = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+        'http-equiv' => 'X-UA-Compatible',
+        'content' => 'IE=edge,chrome=1',
+      ),
+    );
+    // Include meta tags.
+    drupal_add_html_head($rendering_meta, 'rendering_meta');
+
+    // Add a theme-specific css class to the body tag.
+    $variables['attributes']['class'][] = 'formata';
+}
+
+function formata_preprocess_region(&$variables) {
+  $variables['attributes']['class'][] = 'clearfix';
+}
+
+
+function formata_css_alter(&$css) {
+  $theme_path = drupal_get_path('theme', 'formata');
+// Add googlefonts.
+  $googlefonts = '//fonts.googleapis.com/css?family=Merriweather:300,300italic,700,700italic,400,400italic|Merriweather+Sans:400,400italic,700,700italic,300italic,300';
+  $css[$googlefonts] = array(
+    'data' => $googlefonts,
+    'type' => 'external',
+    'every_page' => TRUE,
+    'media' => 'all',
+    'preprocess' => FALSE,
+    'group' => CSS_AGGREGATE_THEME,
+    'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+    'weight' => -1,
+  );
+
+   // Add FontAwesome.
+  $fontawesome = '//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css';
+  $css[$fontawesome] = array(
+    'data' => $fontawesome,
+    'type' => 'external',
+    'every_page' => TRUE,
+    'media' => 'all',
+    'preprocess' => FALSE,
+    'group' => CSS_AGGREGATE_THEME,
+    'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+    'weight' => -2,
+  );
+}
+
+
+function formata_library_info() {
+    // Add jquery as a dependancy on script.js
+    $libraries['formata.corescripts'] = array(
+      'title' => 'Adding all scripts and dependencies',
+      'version' => '1.0',
+      'js' => array(
+       drupal_get_path('theme', 'formata') . '/js/jquery.scrollUp.min.js' => array(),
+       drupal_get_path('theme', 'formata') . '/js/jquery.fs.naver.min.js' => array(),
+       drupal_get_path('theme', 'formata') . '/js/rainbow/rainbow.min.js' => array(),
+       drupal_get_path('theme', 'formata') . '/js/rainbow/rainbow.linenumbers.min.js' => array(),
+       drupal_get_path('theme', 'formata') . '/js/rainbow/language/generic.js' => array(),
+       drupal_get_path('theme', 'formata') . '/js/rainbow/language/javascript.js' => array(),
+       drupal_get_path('theme', 'formata') . '/js/rainbow/language/php' => array(),
+       drupal_get_path('theme', 'formata') . '/js/script.js' => array(),
+      ),
+      'dependencies' => array(
+        array('system', 'jquery'),
+        array('system', 'modernizr'),
+      ),
+    );
+    return $libraries;
+  }
+  drupal_add_library('formata', 'formata.corescripts');
