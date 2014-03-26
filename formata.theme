@@ -80,7 +80,7 @@ function formata_library_info() {
     );
     return $libraries;
   }
-  $example = array(
+  $formata = array(
     '#attached' => array(
       'library' => array(
         array('formata', 'formata.corescripts'),
