@@ -80,4 +80,11 @@ function formata_library_info() {
     );
     return $libraries;
   }
-  drupal_add_library('formata', 'formata.corescripts');
+  $example = array(
+    '#attached' => array(
+      'library' => array(
+        array('formata', 'formata.corescripts'),
+      ),  
+    ),  
+  );
+
