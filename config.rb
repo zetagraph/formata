@@ -13,17 +13,17 @@ javascripts_dir = "js"
 
 # Change this to :production when ready to deploy the CSS to the live server.
 # Note: If you are using grunt.js, these variables will be overriden.
-environment = :development
-#environment = :production
+#environment = :development
+environment = :production
 
 # To enable relative paths to assets via compass helper functions. Since Drupal themes can be installed in multiple locations, we shouldn't need to worry about the absolute path to the theme from the server root.
 relative_assets = true
 
 # To enable debugging comments that display the original location of your selectors. Comment:
-line_comments = true
+#line_comments = true
 
 # In development, we can turn on the debug_info to use with FireSass or Chrome Web Inspector. Uncomment:
-debug = true
+#debug = true
 
 
 ##############################
