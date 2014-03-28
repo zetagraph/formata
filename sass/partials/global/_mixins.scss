@@ -130,3 +130,29 @@
 @mixin nobullet {
     list-style-type: none;
 }
+
+// Html5 inputs
+// -------------------------------------------------------
+
+/*From seven theme.*/
+@mixin input() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  box-sizing:         border-box;
+  padding: 2px;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-top-color: #999;
+  background: #fff;
+  color: #333;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+/*From seven theme.*/
+@mixin input-focus() {
+  color: #000;
+  border-color: rgba(0, 116, 189, 0.8);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(220, 220, 220, 0.4);
+  outline-color: rgba(0, 116, 189, 0.5);
+}
