@@ -189,3 +189,34 @@ pre .variable.global, pre .variable.class, pre .variable.instance {
 .rainbow .line .line-code {
   width: 100%;
 }
+
+// Html5 inputs
+// -------------------------------------------------------
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="number"],
+input[type="color"],
+input[type="file"],
+input[type="password"],
+textarea,
+select {
+  @include input();
+  padding: 7px 4px 7px 10px;
+}
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="color"]:focus,
+input[type="file"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  @include input-focus();
+}
