@@ -1,0 +1,15 @@
+formata.corescripts:
+  version: 1.0
+  js:
+    js/jquery.scrollUp.min.js: {}
+    js/jquery.fs.naver.min.js: {}
+    js/rainbow/rainbow.min.js: {}
+    js/rainbow/rainbow.linenumbers.min.js: {}
+    js/rainbow/language/generic.js: {}
+    js/rainbow/language/javascript.js: {}
+    js/rainbow/language/css.js: {}
+    js/rainbow/language/php.js: {}
+    js/script.js: {}
+  dependencies:
+    - core/jquery
+    - core/modernizr

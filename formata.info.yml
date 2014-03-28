@@ -1,9 +1,9 @@
 name: formata
+type: theme
 description: Drupal 8 Theme
+version: 1.0
 core: 8.x
 engine: twig
-version: 1.0
-type: theme
 screenshot: img/screenshot.png
 
 stylesheets:
@@ -15,6 +15,6 @@ stylesheets-remove:
   - normalize.css
 
 regions:
-   content: 'Content'
-   sidebar: 'Sidebar'
-   footer: 'Footer'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  footer: 'Footer'

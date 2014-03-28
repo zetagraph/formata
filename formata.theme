@@ -6,26 +6,25 @@
 
 function formata_preprocess_html(&$variables) {
 
-    // Set up meta tags.
-    // Modern IE & chrome-frame rendering engine tag.
-    $rendering_meta = array(
-      '#tag' => 'meta',
-      '#attributes' => array(
-        'http-equiv' => 'X-UA-Compatible',
-        'content' => 'IE=edge,chrome=1',
-      ),
-    );
-    // Include meta tags.
-    drupal_add_html_head($rendering_meta, 'rendering_meta');
+  // Set up meta tags.
+  // Modern IE & chrome-frame rendering engine tag.
+  $rendering_meta = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'http-equiv' => 'X-UA-Compatible',
+      'content' => 'IE=edge,chrome=1',
+    ),
+  );
+  // Include meta tags.
+  drupal_add_html_head($rendering_meta, 'rendering_meta');
 
-    // Add a theme-specific css class to the body tag.
-    $variables['attributes']['class'][] = 'formata';
+  // Add a theme-specific css class to the body tag.
+  $variables['attributes']['class'][] = 'formata';
 }
 
 function formata_preprocess_region(&$variables) {
   $variables['attributes']['class'][] = 'clearfix';
 }
-
 
 function formata_css_alter(&$css) {
   $theme_path = drupal_get_path('theme', 'formata');
@@ -56,35 +55,19 @@ function formata_css_alter(&$css) {
   );
 }
 
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function formata_preprocess_page(&$variables) {
 
-function formata_library_info() {
-    // Add jquery as a dependancy on script.js
-    $libraries['formata.corescripts'] = array(
-      'title' => 'Adding all scripts and dependencies',
-      'version' => '1.0',
-      'js' => array(
-       drupal_get_path('theme', 'formata') . '/js/jquery.scrollUp.min.js' => array(),
-       drupal_get_path('theme', 'formata') . '/js/jquery.fs.naver.min.js' => array(),
-       drupal_get_path('theme', 'formata') . '/js/rainbow/rainbow.min.js' => array(),
-       drupal_get_path('theme', 'formata') . '/js/rainbow/rainbow.linenumbers.min.js' => array(),
-       drupal_get_path('theme', 'formata') . '/js/rainbow/language/generic.js' => array(),
-       drupal_get_path('theme', 'formata') . '/js/rainbow/language/javascript.js' => array(),
-       drupal_get_path('theme', 'formata') . '/js/rainbow/language/css.js' => array(),
-       drupal_get_path('theme', 'formata') . '/js/rainbow/language/php.js' => array(),
-       drupal_get_path('theme', 'formata') . '/js/script.js' => array(),
-      ),
-      'dependencies' => array(
-        array('system', 'jquery'),
-        array('system', 'modernizr'),
-      ),
-    );
-    return $libraries;
-  }
-  $formata = array(
+  // Normally we could attach libraries via hook_page_alter(), but when the
+  // database is inactive it's not called so we add them here.
+  $libraries = array(
     '#attached' => array(
       'library' => array(
-        array('formata', 'formata.corescripts'),
-      ),  
-    ),  
+        'formata/formata.corescripts',
+      ),
+    ),
   );
-
+  drupal_render($libraries);
+}
