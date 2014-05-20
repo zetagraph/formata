@@ -25,8 +25,7 @@
 
   <div class="content clearfix"{{ content_attributes }}>
     {# We hide links now so that we can render them later. #}
-    {% hide(content.links) %}
-    {{ content }}
+    {{ content|without('links') }}
   </div>
 
   {% if content.links %}
