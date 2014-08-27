@@ -5,8 +5,10 @@
 
 #main-nav {
   ul {
+    @include reset;
     border-top: 1px solid darken($peter-river, 7%);
     li {
+      @include reset;
       @include nobullet;
       a {
         display: block;
