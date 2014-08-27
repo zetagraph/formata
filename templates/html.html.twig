@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * basic html structure of a single Drupal page.
+ */
+#}
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" {{ html_attributes }}><![endif]-->
+<html{{ html_attributes }}>
+    <head>
+        {{ page.head }}
+        <title>{{ head_title }}</title>
+        {{ page.styles }}
+        {{ page.scripts }}
+    </head>
+    <body{{ attributes }}>
+        {{ page_top }}
+        {{ page.content }}
+        {{ page_bottom }}
+        {{ page.scripts('footer') }}
+    </body>
+</html>
