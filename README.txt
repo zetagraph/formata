@@ -1,4 +1,4 @@
-Drupal 8 theme (Update for D8 Beta).
+Drupal 8 theme (Update for D8 Beta2).
 
 Simple, clean, minimal configurations theme.
 
