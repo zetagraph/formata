@@ -1,30 +1,13 @@
 <?php
+
 /**
  * @file
  * Contains theme override and preprocess functions.
  */
 
-function formata_preprocess_html(&$variables) {
-
-  // Set up meta tags.
-  // Modern IE & chrome-frame rendering engine tag.
-  $rendering_meta = array(
-    '#tag' => 'meta',
-    '#attributes' => array(
-      'http-equiv' => 'X-UA-Compatible',
-      'content' => 'IE=edge,chrome=1',
-    ),
-  );
-  // Include meta tags.
-  drupal_add_html_head($rendering_meta, 'rendering_meta');
-
-  // Add a theme-specific css class to the body tag.
-  $variables['attributes']['class'][] = 'formata';
-}
-
-function formata_preprocess_region(&$variables) {
-  $variables['attributes']['class'][] = 'clearfix';
-}
+use Drupal\Component\Utility\String;
+use Drupal\Component\Utility\Xss;
+use Drupal\Core\Template\Attribute;
 
 function formata_css_alter(&$css) {
   $theme_path = drupal_get_path('theme', 'formata');

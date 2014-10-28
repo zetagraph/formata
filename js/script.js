@@ -1,6 +1,6 @@
 (function ($) {
   $(document).ready(function() {
-    $(".naver").naver({
+    $(".region-nav").naver({
       animated: true,
       label: false
     });

@@ -3,75 +3,75 @@
  * Typography
  */
 
-
 body {
-  font-family: $body-font;
-  font-weight: $light;
-  color: $midnight-blue;
+    font-family: $body-font;
+    font-weight: $light;
+    color: $midnight-blue;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $title-font;
-  font-weight: $bold;
-  color: $wet-asphalt;
+    font-family: $title-font;
+    font-weight: $bold;
+    color: $wet-asphalt;
 }
 
 h1 {
-  @include typecsset-font-size(42px);
+    @include typecsset-font-size(42px);
 }
 
 h2 {
-  @include typecsset-font-size(30px);
+    @include typecsset-font-size(34px);
 }
 
 h3 {
-  @include typecsset-font-size(24px);
+    @include typecsset-font-size(24px);
 }
 
 h4 {
-  @include typecsset-font-size(20px);
+    @include typecsset-font-size(20px);
 }
 
 h5 {
-  @include typecsset-font-size(18px);
+    @include typecsset-font-size(18px);
 }
 
 h5 {
-  @include typecsset-font-size(16px);
+    @include typecsset-font-size(16px);
 }
 
 p.large {
-  // @include typecsset-space(margin-bottom);
+    // @include typecsset-space(margin-bottom);
 }
 
 .content ul {
-@include unordered;
+    @include unordered;
 }
 
 .content ol {
-  @include ordered;
+    @include ordered;
 }
 
-strong, b   {
-  font-weight: $bold;
+strong, b {
+    font-weight: $bold;
 }
 
-em, i, q  {
-  font-style: italic;
+em, i, q {
+    font-style: italic;
 }
 
 blockquote {
- @include typecsset-font-size(20px);
+    @include typecsset-font-size(20px);
 }
 
 hr {
-  background: none;
-  height: 1px;
-  border: 1px  solid $clouds;
-  @include typecsset-space(margin-bottom);
+    background: none;
+    height: 1px;
+    border: 1px solid $clouds;
+    @include typecsset-space(margin-bottom);
 }
 
 @media screen and (max-width: 400px) {
-  .content {
-    @include typecsset-font-size(14px);  }
+    .content {
+        @include typecsset-font-size(14px);
+    }
 }
