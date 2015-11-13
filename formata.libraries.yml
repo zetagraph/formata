@@ -1,5 +1,8 @@
 formata.corescripts:
   version: 1.0
+  css:
+    theme:
+      css/style.css: {}
   js:
     js/jquery.scrollUp.min.js: {}
     js/jquery.fs.naver.min.js: {}

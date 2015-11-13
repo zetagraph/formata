@@ -6,9 +6,8 @@ core: 8.x
 engine: twig
 screenshot: img/screenshot.png
 
-stylesheets:
-  all:
-  - css/style.css
+libraries:
+  - formata/formata.corescripts
 
 # Remove a CSS file:
 stylesheets-remove:
